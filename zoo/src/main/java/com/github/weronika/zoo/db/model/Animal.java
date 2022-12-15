@@ -26,10 +26,6 @@ public class Animal {
     @NotNull
     private Integer amountOfFood;
 
-    @ManyToOne(targetEntity = Zone.class)
-    @JoinColumn(name = "id_animal", referencedColumnName = "id_animal", nullable = true)
-    private Zone zone;
-
     public Animal(String species, String name) {
         this.species = species;
         this.name = name;
@@ -49,9 +45,6 @@ public class Animal {
 
     public void setAmountOfFood(Integer amountOfFood) { this.amountOfFood = amountOfFood; }
 
-    public Zone getZone() { return zone; }
-
-    public void setZone(Zone zone) { this.zone = zone; }
 
     @Override
     public boolean equals(Object obj) {

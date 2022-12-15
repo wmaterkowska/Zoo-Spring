@@ -31,7 +31,7 @@ public class Zone {
     private final Integer maxAmountOfFood = 100;
 
     @Column
-    @OneToMany(mappedBy = "animal", targetEntity = Animal.class)
+    @OneToMany(mappedBy = "idAnimal", targetEntity = Animal.class)
     private List<Animal> listOfAnimals;
 
 
